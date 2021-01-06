@@ -1,0 +1,19 @@
+<!--extender el layout-->
+
+{% extends "layaout.html" %}
+
+{% block body %}
+<!--Renderizar las tareas y un enlace para la agregar.html-->
+<h1>lista de tareas</h1>
+
+<ul>
+    {% for tarea in tareas %}
+    <li>{{ tarea }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{{url_for('agregar')}}">Agregar Nueva Tarea</a>
+
+
+{% endblock %}
+
